@@ -2,146 +2,153 @@
 @import "./resets";
 @import "./menu.scss";
 
-header {
+.welcome-text {
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
   background-position: center center;
   height: 100vh;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
 
-  .welcome-text {
-    height: 54%;
-    padding-top: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    p {
-      font-size: 20px;
-      span {
-        display: block;
-      }
+  h1,
+  p {
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
+
+  p {
+    font-size: 20px;
+    span {
+      display: block;
+    }
+  }
+  .arrow-down {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    color: white;
   }
 }
 
-#team-section {
+.team-section {
   display: flex;
   flex-direction: column;
+  padding: 20px 40px;
+  position: relative;
+  align-items: center;
 
   h1 {
     padding: 10px;
     text-align: center;
   }
-  .firstname {
-    font-weight: bold;
-  }
-  p {
-    padding: 10px;
-    font-size: smaller;
-  }
-  img {
-    width: 60%;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 7px rgb(192, 188, 188);
-  }
-  .rakib-info {
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 
-    .rakib-description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      height: 28%;
-      background: rgb(212, 210, 210);
-      border-radius: 2%;
-      p {
-        width: 70%;
-      }
-    }
+  .person-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .alexandra-info {
-    height: 55vh;
+
+  .person-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    .alexandra-description {
+    margin-bottom: 60px;
+
+    .firstname {
+      font-weight: bold;
+    }
+    p {
+      padding: 10px;
+      font-size: smaller;
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 9999px;
+      box-shadow: 0 0 15px 7px rgb(192, 188, 188);
+      margin: 20px 0;
+    }
+
+    .person-description {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 80%;
-      height: 28%;
       background: rgb(212, 210, 210);
-      border-radius: 2%;
-      p {
-        width: 70%;
-      }
+      border-radius: 10px;
+      padding: 20px;
     }
   }
-  .lasse-info {
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    .lasse-description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      height: 28%;
-      background: rgb(212, 210, 210);
-      border-radius: 2%;
-      p {
-        width: 70%;
-      }
-    }
-  }
-  .sebastian-info {
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    .sebastian-description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      height: 28%;
-      background: rgb(212, 210, 210);
-      border-radius: 2%;
-      p {
-        width: 70%;
-      }
-    }
+  .arrow-down {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    color: black;
   }
 }
 
-footer {
-  #footer-container {
-    width: 40%;
-    height: 400px;
-    line-height: 1.8;
-    font-size: 16px;
-    margin-left: 30%;
-    margin-right: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
+.footer-container {
+  width: 100%;
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
   background: black;
   color: white;
+
+  div {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /* Tablets */
 @media screen and (min-width: 768px) {
+  .navbar {
+    li {
+      a {
+        padding: 20px 30px;
+      }
+    }
+    .menu {
+      flex-direction: row;
+      justify-content: flex-end;
+      max-height: none;
+      padding: 20px;
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+  .person-section {
+    justify-content: flex-start;
+    margin-left: 70px;
+    .person-info {
+      margin: 40px;
+    }
+  }
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    div {
+      margin-bottom: 0;
+    }
+    .footer-social {
+      i {
+        padding: 10px;
+      }
+    }
+  }
 }
 
 /* Desktops */

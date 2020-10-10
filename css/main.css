@@ -9,7 +9,11 @@
   box-sizing: border-box; }
 
 .navbar {
-  opacity: 0.8; }
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  width: 100%; }
   .navbar ul {
     display: flex;
     flex-direction: column;
@@ -19,7 +23,6 @@
     list-style: none;
     overflow: hidden; }
   .navbar li a {
-    padding: 20px 20px;
     text-decoration: none;
     color: white; }
     .navbar li a:hover {
@@ -89,129 +92,112 @@
         width: 100%;
         top: -10px; }
 
-@media (min-width: 48em) {
-  .navbar li {
-    display: flex;
-    flex-direction: row; }
-    .navbar li a {
-      padding: 20px 30px; }
-  .navbar .menu {
-    float: right;
-    max-height: none; }
-  .navbar .menu-icon {
-    display: none; } }
-
-header {
+.welcome-text {
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
   background-position: center center;
   height: 100vh;
-  color: white; }
-  header .welcome-text {
-    height: 54%;
-    padding-top: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center; }
-    header .welcome-text p {
-      font-size: 20px; }
-      header .welcome-text p span {
-        display: block; }
-
-#team-section {
+  color: white;
   display: flex;
-  flex-direction: column; }
-  #team-section h1 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px; }
+  .welcome-text h1,
+  .welcome-text p {
+    margin-bottom: 60px; }
+    .welcome-text h1:last-child,
+    .welcome-text p:last-child {
+      margin-bottom: 0; }
+  .welcome-text p {
+    font-size: 20px; }
+    .welcome-text p span {
+      display: block; }
+  .welcome-text .arrow-down {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    color: white; }
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  position: relative;
+  align-items: center; }
+  .team-section h1 {
     padding: 10px;
     text-align: center; }
-  #team-section .firstname {
-    font-weight: bold; }
-  #team-section p {
-    padding: 10px;
-    font-size: smaller; }
-  #team-section img {
-    width: 60%;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 7px #c0bcbc; }
-  #team-section .rakib-info {
-    height: 55vh;
+  .team-section .person-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .team-section .person-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly; }
-    #team-section .rakib-info .rakib-description {
+    margin-bottom: 60px; }
+    .team-section .person-info .firstname {
+      font-weight: bold; }
+    .team-section .person-info p {
+      padding: 10px;
+      font-size: smaller; }
+    .team-section .person-info img {
+      width: 300px;
+      height: 300px;
+      border-radius: 9999px;
+      box-shadow: 0 0 15px 7px #c0bcbc;
+      margin: 20px 0; }
+    .team-section .person-info .person-description {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 80%;
-      height: 28%;
       background: #d4d2d2;
-      border-radius: 2%; }
-      #team-section .rakib-info .rakib-description p {
-        width: 70%; }
-  #team-section .alexandra-info {
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly; }
-    #team-section .alexandra-info .alexandra-description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      height: 28%;
-      background: #d4d2d2;
-      border-radius: 2%; }
-      #team-section .alexandra-info .alexandra-description p {
-        width: 70%; }
-  #team-section .lasse-info {
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly; }
-    #team-section .lasse-info .lasse-description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      height: 28%;
-      background: #d4d2d2;
-      border-radius: 2%; }
-      #team-section .lasse-info .lasse-description p {
-        width: 70%; }
-  #team-section .sebastian-info {
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly; }
-    #team-section .sebastian-info .sebastian-description {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80%;
-      height: 28%;
-      background: #d4d2d2;
-      border-radius: 2%; }
-      #team-section .sebastian-info .sebastian-description p {
-        width: 70%; }
+      border-radius: 10px;
+      padding: 20px; }
+  .team-section .arrow-down {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    color: black; }
 
-footer {
+.footer-container {
+  width: 100%;
+  line-height: 1.8;
+  font-size: 16px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
   background: black;
   color: white; }
-  footer #footer-container {
-    width: 40%;
-    height: 400px;
-    line-height: 1.8;
-    font-size: 16px;
-    margin-left: 30%;
-    margin-right: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; }
+  .footer-container div {
+    margin-bottom: 30px; }
+    .footer-container div:last-child {
+      margin-bottom: 0; }
 
 /* Tablets */
+@media screen and (min-width: 768px) {
+  .navbar li a {
+    padding: 20px 30px; }
+  .navbar .menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    max-height: none;
+    padding: 20px; }
+  .navbar .menu-icon {
+    display: none; }
+  .person-section {
+    justify-content: flex-start;
+    margin-left: 70px; }
+    .person-section .person-info {
+      margin: 40px; }
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between; }
+    .footer-container div {
+      margin-bottom: 0; }
+    .footer-container .footer-social i {
+      padding: 10px; } }
+
 /* Desktops */
