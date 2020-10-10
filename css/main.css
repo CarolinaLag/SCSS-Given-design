@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.navbar {
+  opacity: 0.8; }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+  .navbar li a {
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white; }
+    .navbar li a:hover {
+      text-decoration: underline; }
+  .navbar .menu-btn {
+    display: none; }
+    .navbar .menu-btn:hover {
+      text-decoration: underline; }
+    .navbar .menu-btn:checked ~ .menu {
+      max-height: 240px; }
+    .navbar .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent; }
+      .navbar .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg); }
+      .navbar .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg); }
+    .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+      top: 0; }
+    .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0; }
+  .navbar .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none; }
+  .navbar .menu {
+    display: flex;
+    justify-content: center;
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out; }
+  .navbar .menu-icon {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none; }
+    .navbar .menu-icon .navicon {
+      background: white;
+      border-radius: 3px;
+      display: block;
+      height: 4px;
+      position: relative;
+      transition: background 0.2s ease-out;
+      width: 25px; }
+      .navbar .menu-icon .navicon:before {
+        background: white;
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+        top: 10px; }
+      .navbar .menu-icon .navicon:after {
+        background: white;
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+        top: -10px; }
+
+@media (min-width: 48em) {
+  .navbar li {
+    display: flex;
+    flex-direction: row; }
+    .navbar li a {
+      padding: 20px 30px; }
+  .navbar .menu {
+    float: right;
+    max-height: none; }
+  .navbar .menu-icon {
+    display: none; } }
+
+header {
+  background-image: url("../images/negative-space-black-forest-dawn.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: white; }
+  header .welcome-text {
+    height: 54%;
+    padding-top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center; }
+    header .welcome-text p {
+      font-size: 20px; }
+      header .welcome-text p span {
+        display: block; }
+
+#team-section {
+  display: flex;
+  flex-direction: column; }
+  #team-section h1 {
+    padding: 10px;
+    text-align: center; }
+  #team-section .firstname {
+    font-weight: bold; }
+  #team-section p {
+    padding: 10px;
+    font-size: smaller; }
+  #team-section img {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 7px #c0bcbc; }
+  #team-section .rakib-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    #team-section .rakib-info .rakib-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: #d4d2d2;
+      border-radius: 2%; }
+      #team-section .rakib-info .rakib-description p {
+        width: 70%; }
+  #team-section .alexandra-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    #team-section .alexandra-info .alexandra-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: #d4d2d2;
+      border-radius: 2%; }
+      #team-section .alexandra-info .alexandra-description p {
+        width: 70%; }
+  #team-section .lasse-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    #team-section .lasse-info .lasse-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: #d4d2d2;
+      border-radius: 2%; }
+      #team-section .lasse-info .lasse-description p {
+        width: 70%; }
+  #team-section .sebastian-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    #team-section .sebastian-info .sebastian-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: #d4d2d2;
+      border-radius: 2%; }
+      #team-section .sebastian-info .sebastian-description p {
+        width: 70%; }
+
+footer {
+  background: black;
+  color: white; }
+  footer #footer-container {
+    width: 40%;
+    height: 400px;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+
+/* Tablets */
+/* Desktops */

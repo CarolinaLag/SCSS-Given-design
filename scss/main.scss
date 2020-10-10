@@ -1,0 +1,149 @@
+@import "./variables/variables";
+@import "./resets";
+@import "./menu.scss";
+
+header {
+  background-image: url("../images/negative-space-black-forest-dawn.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: white;
+
+  .welcome-text {
+    height: 54%;
+    padding-top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    p {
+      font-size: 20px;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+#team-section {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    padding: 10px;
+    text-align: center;
+  }
+  .firstname {
+    font-weight: bold;
+  }
+  p {
+    padding: 10px;
+    font-size: smaller;
+  }
+  img {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 7px rgb(192, 188, 188);
+  }
+  .rakib-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .rakib-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: rgb(212, 210, 210);
+      border-radius: 2%;
+      p {
+        width: 70%;
+      }
+    }
+  }
+  .alexandra-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .alexandra-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: rgb(212, 210, 210);
+      border-radius: 2%;
+      p {
+        width: 70%;
+      }
+    }
+  }
+  .lasse-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .lasse-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: rgb(212, 210, 210);
+      border-radius: 2%;
+      p {
+        width: 70%;
+      }
+    }
+  }
+  .sebastian-info {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .sebastian-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 28%;
+      background: rgb(212, 210, 210);
+      border-radius: 2%;
+      p {
+        width: 70%;
+      }
+    }
+  }
+}
+
+footer {
+  #footer-container {
+    width: 40%;
+    height: 400px;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  background: black;
+  color: white;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+}
