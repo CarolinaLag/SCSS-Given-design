@@ -2,17 +2,14 @@
 @import "./resets";
 
 .navbar {
+  background: rgba(255, 255, 255, 0.1);
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0.8;
   width: 100%;
   ul {
-    display: flex;
-    flex-direction: column;
+    @include flexCol;
     text-align: center;
-    margin: 0;
-    padding: 0;
     list-style: none;
     overflow: hidden;
   }
@@ -20,16 +17,13 @@
   li {
     a {
       text-decoration: none;
-      color: white;
+      color: $primary-color;
       &:hover {
         text-decoration: underline;
       }
     }
   }
   .menu-btn {
-    &:hover {
-      text-decoration: underline;
-    }
     display: none;
     &:checked {
       ~ {
@@ -64,8 +58,8 @@
     display: block;
     float: left;
     font-size: 2em;
-    padding: 10px 20px;
     text-decoration: none;
+    padding: 10px 20px;
   }
   .menu {
     display: flex;

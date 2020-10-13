@@ -1,2 +1,4 @@
 [1010/121538.066:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Carolina\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\9711d0c7-fd49-4907-ade8-416bd3a2df55: The system cannot find the path specified. (0x3)
 [1010/121538.069:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1013/101929.719:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1013/140724.986:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

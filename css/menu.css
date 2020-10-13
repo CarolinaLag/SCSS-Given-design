@@ -4,17 +4,15 @@
   box-sizing: border-box; }
 
 .navbar {
+  background: rgba(255, 255, 255, 0.1);
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0.8;
   width: 100%; }
   .navbar ul {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0;
-    padding: 0;
     list-style: none;
     overflow: hidden; }
   .navbar li a {
@@ -24,8 +22,6 @@
       text-decoration: underline; }
   .navbar .menu-btn {
     display: none; }
-    .navbar .menu-btn:hover {
-      text-decoration: underline; }
     .navbar .menu-btn:checked ~ .menu {
       max-height: 240px; }
     .navbar .menu-btn:checked ~ .menu-icon .navicon {
@@ -42,8 +38,8 @@
     display: block;
     float: left;
     font-size: 2em;
-    padding: 10px 20px;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 10px 20px; }
   .navbar .menu {
     display: flex;
     justify-content: center;
