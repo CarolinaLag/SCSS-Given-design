@@ -7,22 +7,7 @@
   top: 0;
   right: 0;
   width: 100%;
-  ul {
-    @include flexCol;
-    text-align: center;
-    list-style: none;
-    overflow: hidden;
-  }
 
-  li {
-    a {
-      text-decoration: none;
-      color: $primary-color;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
   .menu-btn {
     display: none;
     &:checked {
@@ -54,33 +39,15 @@
       }
     }
   }
-  .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    text-decoration: none;
-    padding: 10px 20px;
-  }
-  .menu {
-    display: flex;
-    justify-content: center;
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-  }
-
   .menu-icon {
     display: flex;
     justify-content: flex-end;
-    border-radius: 3px;
     cursor: pointer;
     padding: 28px 20px;
-    position: relative;
     user-select: none;
     .navicon {
       background: white;
       border-radius: 3px;
-      display: block;
       height: 4px;
       position: relative;
       transition: background 0.2s ease-out;
@@ -106,6 +73,28 @@
         transition: all 0.2s ease-out;
         width: 100%;
         top: -10px;
+      }
+    }
+  }
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  ul {
+    @include flexCol;
+    text-align: center;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  li {
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

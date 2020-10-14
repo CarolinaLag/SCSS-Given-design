@@ -14,17 +14,6 @@
   top: 0;
   right: 0;
   width: 100%; }
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    list-style: none;
-    overflow: hidden; }
-  .navbar li a {
-    text-decoration: none;
-    color: white; }
-    .navbar li a:hover {
-      text-decoration: underline; }
   .navbar .menu-btn {
     display: none; }
     .navbar .menu-btn:checked ~ .menu {
@@ -39,30 +28,15 @@
       top: 0; }
     .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
       top: 0; }
-  .navbar .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    text-decoration: none;
-    padding: 10px 20px; }
-  .navbar .menu {
-    display: flex;
-    justify-content: center;
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out; }
   .navbar .menu-icon {
     display: flex;
     justify-content: flex-end;
-    border-radius: 3px;
     cursor: pointer;
     padding: 28px 20px;
-    position: relative;
     user-select: none; }
     .navbar .menu-icon .navicon {
       background: white;
       border-radius: 3px;
-      display: block;
       height: 4px;
       position: relative;
       transition: background 0.2s ease-out;
@@ -87,16 +61,31 @@
         transition: all 0.2s ease-out;
         width: 100%;
         top: -10px; }
+  .navbar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out; }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    overflow: hidden; }
+  .navbar li a {
+    text-decoration: none;
+    color: white; }
+    .navbar li a:hover {
+      text-decoration: underline; }
 
 .welcome-text {
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
   background-position: center center;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: white;
   height: 100vh;
   padding: 40px; }
   .welcome-text h1,
@@ -107,8 +96,6 @@
       margin-bottom: 0; }
   .welcome-text p {
     font-size: 20px; }
-    .welcome-text p span {
-      display: block; }
   .welcome-text .arrow-down {
     color: white;
     position: absolute;
@@ -120,40 +107,39 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-bottom: 20px; }
+  padding: 40px; }
   .team-section h1 {
-    text-align: center;
     padding: 40px; }
   .team-section .person-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-  .team-section .person-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px; }
-    .team-section .person-info .firstname {
-      font-weight: bold; }
-    .team-section .person-info p {
-      font-size: smaller;
-      padding: 10px; }
-    .team-section .person-info img {
-      border-radius: 9999px;
-      box-shadow: 0 0 15px 7px #c0bcbc;
-      width: 300px;
-      height: 300px;
-      margin: 20px 0; }
-    .team-section .person-info .person-description {
-      background: #d4d2d2;
-      border-radius: 4px;
-      padding: 20px;
-      width: 80%; }
+    .team-section .person-section .person-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 60px; }
+      .team-section .person-section .person-info .firstname {
+        font-weight: bold; }
+      .team-section .person-section .person-info img {
+        border-radius: 9999px;
+        box-shadow: 0 0 15px 7px #c0bcbc;
+        width: 300px;
+        height: 300px;
+        margin: 20px 0; }
+      .team-section .person-section .person-info .person-description {
+        background: #d4d2d2;
+        border-radius: 4px;
+        padding: 20px;
+        width: 80%; }
+        .team-section .person-section .person-info .person-description p {
+          font-size: smaller;
+          padding: 10px; }
   .team-section .arrow-down {
     color: black;
     position: absolute;
     bottom: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 40px; }
 
 .footer-container {
   display: flex;
@@ -161,34 +147,37 @@
   background: black;
   color: white;
   line-height: 1.8;
-  padding: 60px; }
+  padding: 50px; }
   .footer-container div {
-    margin-bottom: 30px; }
+    margin: 20px 40px; }
     .footer-container div:last-child {
       margin-bottom: 0; }
+  .footer-container .footer-social i {
+    margin-right: 10px; }
 
 /* Tablets */
 @media screen and (min-width: 768px) {
-  .navbar li a {
-    padding: 20px 30px; }
+  .navbar .menu-icon {
+    display: none; }
   .navbar .menu {
     flex-direction: row;
     justify-content: flex-end;
     max-height: none;
     padding: 20px; }
-  .navbar .menu-icon {
-    display: none; }
-  .person-section .person-info {
+  .navbar li a {
+    padding: 20px 30px; }
+  .team-section .person-section .person-info {
     width: 50%; }
-    .person-section .person-info .person-description {
+    .team-section .person-section .person-info .person-description {
       width: auto;
       margin: 20px; }
   .footer-container {
     flex-direction: row;
     justify-content: space-between; }
-    .footer-container div {
-      margin-bottom: 0; }
     .footer-container .footer-social i {
       padding: 10px; } }
 
 /* Desktops */
+@media screen and (min-width: 1024px) {
+  .footer-container div {
+    padding: 0 40px; } }

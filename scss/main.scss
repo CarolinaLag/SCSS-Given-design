@@ -6,10 +6,10 @@
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
   background-position: center center;
+  color: $primary-color;
   @include flexCol;
   justify-content: center;
   text-align: center;
-  color: $primary-color;
   height: 100vh;
   padding: 40px;
 
@@ -24,10 +24,8 @@
 
   p {
     font-size: 20px;
-    span {
-      display: block;
-    }
   }
+
   .arrow-down {
     color: $primary-color;
     position: absolute;
@@ -40,10 +38,9 @@
   @include flexCol;
   align-items: center;
   position: relative;
-  padding-bottom: 20px;
+  padding: 40px;
 
   h1 {
-    text-align: center;
     padding: 40px;
   }
 
@@ -51,40 +48,39 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
 
-  .person-info {
-    @include flexCol;
-    align-items: center;
-    margin-bottom: 60px;
+    .person-info {
+      @include flexCol;
+      align-items: center;
+      margin-bottom: 60px;
 
-    .firstname {
-      font-weight: bold;
-    }
-    p {
-      font-size: smaller;
-      padding: $size1;
-    }
-    img {
-      border-radius: 9999px;
-      box-shadow: 0 0 15px 7px rgb(192, 188, 188);
-      width: 300px;
-      height: 300px;
-      margin: 20px 0;
-    }
-
-    .person-description {
-      background: rgb(212, 210, 210);
-      border-radius: 4px;
-      padding: 20px;
-      width: 80%;
+      .firstname {
+        font-weight: bold;
+      }
+      img {
+        border-radius: 9999px;
+        box-shadow: 0 0 15px 7px rgb(192, 188, 188);
+        width: $img-size;
+        height: $img-size;
+        margin: 20px 0;
+      }
+      .person-description {
+        background: rgb(212, 210, 210);
+        border-radius: 4px;
+        padding: 20px;
+        width: 80%;
+        p {
+          font-size: smaller;
+          padding: $size1;
+        }
+      }
     }
   }
   .arrow-down {
     color: $bg-color;
     position: absolute;
     bottom: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -93,12 +89,17 @@
   background: $bg-color;
   color: $primary-color;
   line-height: 1.8;
-  padding: 60px;
+  padding: 50px;
 
   div {
-    margin-bottom: 30px;
+    margin: 20px 40px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  .footer-social {
+    i {
+      margin-right: 10px;
     }
   }
 }
@@ -106,10 +107,8 @@
 /* Tablets */
 @media screen and (min-width: 768px) {
   .navbar {
-    li {
-      a {
-        padding: 20px 30px;
-      }
+    .menu-icon {
+      display: none;
     }
     .menu {
       flex-direction: row;
@@ -117,26 +116,28 @@
       max-height: none;
       padding: 20px;
     }
-    .menu-icon {
-      display: none;
+    li {
+      a {
+        padding: 20px 30px;
+      }
     }
   }
-  .person-section {
-    .person-info {
-      width: 50%;
+  .team-section {
+    .person-section {
+      .person-info {
+        width: 50%;
 
-      .person-description {
-        width: auto;
-        margin: 20px;
+        .person-description {
+          width: auto;
+          margin: 20px;
+        }
       }
     }
   }
   .footer-container {
     flex-direction: row;
     justify-content: space-between;
-    div {
-      margin-bottom: 0;
-    }
+
     .footer-social {
       i {
         padding: $size1;
@@ -147,4 +148,9 @@
 
 /* Desktops */
 @media screen and (min-width: 1024px) {
+  .footer-container {
+    div {
+      padding: 0 40px;
+    }
+  }
 }
