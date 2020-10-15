@@ -2,7 +2,7 @@
 @import "./resets";
 @import "./menu.scss";
 
-.welcome-text {
+.welcome-section {
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
   background-position: center center;
@@ -12,6 +12,10 @@
   text-align: center;
   height: 100vh;
   padding: 40px;
+
+  .welcome-text {
+    width: 70%;
+  }
 
   h1,
   p {
@@ -48,11 +52,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 50px;
 
     .person-info {
       @include flexCol;
       align-items: center;
       margin-bottom: 60px;
+
+      @include tablet {
+        width: 50%;
+      }
+      @include desktop {
+        &:first-child,
+        &:nth-child(2),
+        &:last-child {
+          .person-description {
+            width: 400px;
+          }
+        }
+      }
 
       .firstname {
         font-weight: bold;
@@ -67,11 +85,20 @@
       .person-description {
         background: rgb(212, 210, 210);
         border-radius: 4px;
-        padding: 20px;
-        width: 80%;
+        padding: 25px;
+        width: 300px;
+        @include tablet {
+          width: auto;
+          margin: 20px;
+          padding: 20px;
+          width: auto;
+        }
         p {
-          font-size: smaller;
+          font-size: 16px;
           padding: $size1;
+          @include tablet {
+            font-size: smaller;
+          }
         }
       }
     }
@@ -88,69 +115,30 @@
   @include flexCol;
   background: $bg-color;
   color: $primary-color;
+  font-size: 20px;
   line-height: 1.8;
   padding: 50px;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+  }
 
   div {
     margin: 20px 40px;
+    @include desktop {
+      padding: 0 40px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
   }
   .footer-social {
-    i {
-      margin-right: 10px;
-    }
-  }
-}
-
-/* Tablets */
-@media screen and (min-width: 768px) {
-  .navbar {
-    .menu-icon {
-      display: none;
-    }
-    .menu {
-      flex-direction: row;
-      justify-content: flex-end;
-      max-height: none;
-      padding: 20px;
-    }
-    li {
-      a {
-        padding: 20px 30px;
+    .fa-ul {
+      margin-left: 1.5em;
+      li {
+        line-height: 2;
       }
-    }
-  }
-  .team-section {
-    .person-section {
-      .person-info {
-        width: 50%;
-
-        .person-description {
-          width: auto;
-          margin: 20px;
-        }
-      }
-    }
-  }
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-
-    .footer-social {
-      i {
-        padding: $size1;
-      }
-    }
-  }
-}
-
-/* Desktops */
-@media screen and (min-width: 1024px) {
-  .footer-container {
-    div {
-      padding: 0 40px;
     }
   }
 }

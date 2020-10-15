@@ -45,6 +45,9 @@
     cursor: pointer;
     padding: 28px 20px;
     user-select: none;
+    @include tablet {
+      display: none;
+    }
     .navicon {
       background: white;
       border-radius: 3px;
@@ -70,7 +73,7 @@
         display: block;
         height: 100%;
         position: absolute;
-        transition: all 0.2s ease-out;
+        @include transition;
         width: 100%;
         top: -10px;
       }
@@ -79,7 +82,12 @@
   .menu {
     clear: both;
     max-height: 0;
-    transition: max-height 0.2s ease-out;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+      max-height: none;
+      padding: 20px;
+    }
   }
 
   ul {
@@ -93,6 +101,9 @@
     a {
       text-decoration: none;
       color: $primary-color;
+      @include tablet {
+        padding: 20px 30px;
+      }
       &:hover {
         text-decoration: underline;
       }

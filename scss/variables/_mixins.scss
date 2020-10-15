@@ -2,3 +2,23 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin transition {
+  -webkit-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

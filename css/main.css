@@ -3,10 +3,16 @@
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 .navbar {
   background: rgba(255, 255, 255, 0.1);
@@ -34,6 +40,9 @@
     cursor: pointer;
     padding: 28px 20px;
     user-select: none; }
+    @media screen and (min-width: 768px) {
+      .navbar .menu-icon {
+        display: none; } }
     .navbar .menu-icon .navicon {
       background: white;
       border-radius: 3px;
@@ -58,13 +67,22 @@
         display: block;
         height: 100%;
         position: absolute;
+        -webkit-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
         width: 100%;
         top: -10px; }
   .navbar .menu {
     clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out; }
+    max-height: 0; }
+    @media screen and (min-width: 768px) {
+      .navbar .menu {
+        flex-direction: row;
+        justify-content: flex-end;
+        max-height: none;
+        padding: 20px; } }
   .navbar ul {
     display: flex;
     flex-direction: column;
@@ -74,10 +92,13 @@
   .navbar li a {
     text-decoration: none;
     color: white; }
+    @media screen and (min-width: 768px) {
+      .navbar li a {
+        padding: 20px 30px; } }
     .navbar li a:hover {
       text-decoration: underline; }
 
-.welcome-text {
+.welcome-section {
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
   background-position: center center;
@@ -88,15 +109,17 @@
   text-align: center;
   height: 100vh;
   padding: 40px; }
-  .welcome-text h1,
-  .welcome-text p {
+  .welcome-section .welcome-text {
+    width: 70%; }
+  .welcome-section h1,
+  .welcome-section p {
     margin-bottom: 60px; }
-    .welcome-text h1:last-child,
-    .welcome-text p:last-child {
+    .welcome-section h1:last-child,
+    .welcome-section p:last-child {
       margin-bottom: 0; }
-  .welcome-text p {
+  .welcome-section p {
     font-size: 20px; }
-  .welcome-text .arrow-down {
+  .welcome-section .arrow-down {
     color: white;
     position: absolute;
     bottom: 0;
@@ -113,28 +136,44 @@
   .team-section .person-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center;
+    margin: 0 50px; }
     .team-section .person-section .person-info {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px; }
+      @media screen and (min-width: 768px) {
+        .team-section .person-section .person-info {
+          width: 50%; } }
+      @media screen and (min-width: 1024px) {
+        .team-section .person-section .person-info:first-child .person-description, .team-section .person-section .person-info:nth-child(2) .person-description, .team-section .person-section .person-info:last-child .person-description {
+          width: 400px; } }
       .team-section .person-section .person-info .firstname {
         font-weight: bold; }
       .team-section .person-section .person-info img {
         border-radius: 9999px;
         box-shadow: 0 0 15px 7px #c0bcbc;
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         margin: 20px 0; }
       .team-section .person-section .person-info .person-description {
         background: #d4d2d2;
         border-radius: 4px;
-        padding: 20px;
-        width: 80%; }
+        padding: 25px;
+        width: 300px; }
+        @media screen and (min-width: 768px) {
+          .team-section .person-section .person-info .person-description {
+            width: auto;
+            margin: 20px;
+            padding: 20px;
+            width: auto; } }
         .team-section .person-section .person-info .person-description p {
-          font-size: smaller;
+          font-size: 16px;
           padding: 10px; }
+          @media screen and (min-width: 768px) {
+            .team-section .person-section .person-info .person-description p {
+              font-size: smaller; } }
   .team-section .arrow-down {
     color: black;
     position: absolute;
@@ -146,38 +185,22 @@
   flex-direction: column;
   background: black;
   color: white;
+  font-size: 20px;
   line-height: 1.8;
   padding: 50px; }
+  @media screen and (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 16px; } }
   .footer-container div {
     margin: 20px 40px; }
+    @media screen and (min-width: 1024px) {
+      .footer-container div {
+        padding: 0 40px; } }
     .footer-container div:last-child {
       margin-bottom: 0; }
-  .footer-container .footer-social i {
-    margin-right: 10px; }
-
-/* Tablets */
-@media screen and (min-width: 768px) {
-  .navbar .menu-icon {
-    display: none; }
-  .navbar .menu {
-    flex-direction: row;
-    justify-content: flex-end;
-    max-height: none;
-    padding: 20px; }
-  .navbar li a {
-    padding: 20px 30px; }
-  .team-section .person-section .person-info {
-    width: 50%; }
-    .team-section .person-section .person-info .person-description {
-      width: auto;
-      margin: 20px; }
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between; }
-    .footer-container .footer-social i {
-      padding: 10px; } }
-
-/* Desktops */
-@media screen and (min-width: 1024px) {
-  .footer-container div {
-    padding: 0 40px; } }
+  .footer-container .footer-social .fa-ul {
+    margin-left: 1.5em; }
+    .footer-container .footer-social .fa-ul li {
+      line-height: 2; }
