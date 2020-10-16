@@ -2,6 +2,10 @@
 @import "./resets";
 @import "./menu.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .welcome-section {
   background-image: url("../images/negative-space-black-forest-dawn.jpg");
   background-size: cover;
@@ -34,7 +38,7 @@
     color: $primary-color;
     position: absolute;
     bottom: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
@@ -42,17 +46,19 @@
   @include flexCol;
   align-items: center;
   position: relative;
-  padding: 40px;
 
   h1 {
-    padding: 40px;
+    padding: 25px;
   }
 
   .person-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 50px;
+    padding: 40px;
+    @include desktop {
+      margin: 0 60px;
+    }
 
     .person-info {
       @include flexCol;
@@ -89,8 +95,10 @@
         width: 300px;
         @include tablet {
           width: auto;
-          margin: 20px;
           padding: 20px;
+          width: 90%;
+        }
+        @include desktop {
           width: auto;
         }
         p {
@@ -106,8 +114,9 @@
   .arrow-down {
     color: $bg-color;
     position: absolute;
+    right: 50%;
     bottom: 0;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
   }
 }
 
@@ -115,22 +124,20 @@
   @include flexCol;
   background: $bg-color;
   color: $primary-color;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.8;
-  padding: 50px;
+  padding: 10%;
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
     font-size: 16px;
+    padding: 30px 40px;
   }
 
   div {
     margin: 20px 40px;
     @include desktop {
       padding: 0 40px;
-    }
-    &:last-child {
-      margin-bottom: 0;
     }
   }
   .footer-social {

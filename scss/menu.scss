@@ -80,7 +80,6 @@
     }
   }
   .menu {
-    clear: both;
     max-height: 0;
     @include tablet {
       flex-direction: row;
@@ -101,6 +100,7 @@
     a {
       text-decoration: none;
       color: $primary-color;
+      font-size: 18px;
       @include tablet {
         padding: 20px 30px;
       }
